@@ -22,6 +22,7 @@ run docker cp copier:/usr/sbin/caddy test/
 run docker rm -f copier &>/dev/null || :
 
 info 'Start services.'
+run docker-compose down || :
 run docker-compose up -d caddy1 caddy2
 run sleep 5
 
