@@ -1,0 +1,9 @@
+# https://gohugo.io/getting-started/configuration/
+canonifyurls = false  # use relative paths
+languageCode = "en-us"
+title = "Caddy1"
+theme = "startpage"
+publishDir = "/var/www"
+
+[params]
+    offline = true

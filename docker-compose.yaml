@@ -47,6 +47,8 @@ services:
     networks:
       testnet:
         ipv4_address: 192.168.254.254
+    environment:
+      - TMPDIR=/dev/shm  # Hugo uses ${TMPDIR}/hugo as build cache.
 
   caddy2:
     extends: caddy

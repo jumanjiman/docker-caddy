@@ -14,6 +14,8 @@ timeouts {
   write  20s
 }
 
+on startup /usr/bin/build_landing_page
+
 # After this line, all other paths are relative to root.
 root /var/www
 
@@ -85,7 +87,7 @@ header / {
   # https://www.owasp.org/index.php/Content_Security_Policy
   # https://report-uri.io/home/generate
   # https://csp-evaluator.withgoogle.com/
-  Content-Security-Policy "default-src 'self'; object-src 'none'; block-all-mixed-content; reflected-xss block;"
+  Content-Security-Policy "default-src 'self' 'filesystem'; object-src 'none'; block-all-mixed-content; reflected-xss block;"
 
   # Certificate Transparency is an open framework for monitoring
   # and auditing the certificates issued by Certificate Authorities

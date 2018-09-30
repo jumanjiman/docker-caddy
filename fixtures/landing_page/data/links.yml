@@ -1,0 +1,49 @@
+---
+
+- name: Caddy1
+  colour: green  # (a valid mdl color name)
+  sections:
+    - links:
+        - title: docker-caddy
+          url: /docker-caddy
+
+        - title: proxy cache
+          url: /assets
+
+        - title: cgi
+          url: /hellocgi
+
+- name: GitHub
+  colour: blue
+  sections:
+    - links:
+        - title: jumanjiman
+          url: https://github.com/jumanjiman
+
+        - title: jumanjihouse
+          url: https://github.com/jumanjihouse
+
+        - title: Alpine Linux Aports
+          url: https://github.com/alpinelinux/aports/
+
+- name: GitLab
+  colour: orange
+  sections:
+    - links:
+        - title: jumanjiman
+          url: https://gitlab.com/jumanjiman
+
+        - title: jumanjihouse
+          url: https://gitlab.com/jumanjihouse
+
+
+- name: News
+  colour: red
+  sections:
+    - links:
+        - title: Al Jazeera
+          url: https://www.aljazeera.com/
+
+    - links:
+        - title: ESPN CFB scoreboard
+          url: http://www.espn.com/college-football/scoreboard

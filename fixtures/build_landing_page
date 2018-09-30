@@ -1,0 +1,21 @@
+#!/bin/sh
+set -euo pipefail
+
+#################################################################################
+# How to delete browser cache:
+# http://www.andygup.net/deleting-an-html-application-cache/
+#################################################################################
+
+run() {
+  echo "[RUN] $*"
+  "$@"
+}
+
+# Build the landing page static content.
+run hugo -s /src
+
+# Why do this?
+# https://github.com/tnwhitwell/hugo-startpage-theme#usage-notes-for-offline-mode
+TIMESTAMP="$(date +%s)"
+run sed -i "s/COMMIT_SHA/${TIMESTAMP}/" /var/www/startpage.appcache
+run grep "${TIMESTAMP}" /var/www/startpage.appcache

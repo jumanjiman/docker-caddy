@@ -1,0 +1,3 @@
+[submodule "fixtures/landing_page/themes/startpage"]
+	path = fixtures/landing_page/themes/startpage
+	url = https://github.com/tnwhitwell/hugo-startpage-theme.git
