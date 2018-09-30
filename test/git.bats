@@ -9,7 +9,7 @@
 }
 
 @test "can browse docker-caddy path" {
-  run docker-compose run curl --fail -sS -L http://192.168.254.254:2020/docker-caddy
+  run docker-compose run curl --fail -sS -L http://192.168.254.254:2020/git/docker-caddy
   [[ $output =~ README.md ]]
   [[ $output =~ LICENSE   ]]
   [[ $output =~ fixtures  ]]

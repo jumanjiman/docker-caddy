@@ -5,13 +5,16 @@
   sections:
     - links:
         - title: docker-caddy
-          url: /docker-caddy
+          url: /git/docker-caddy
 
         - title: proxy cache
           url: /assets
 
         - title: cgi
           url: /hellocgi
+
+        - title: uploads
+          url: /uploads
 
 - name: GitHub
   colour: blue

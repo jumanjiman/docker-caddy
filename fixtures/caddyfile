@@ -14,8 +14,6 @@ timeouts {
   write  20s
 }
 
-on startup /usr/bin/build_landing_page
-
 # After this line, all other paths are relative to root.
 root /var/www
 
@@ -29,8 +27,10 @@ cgi /hellocgi /cgi-bin/hello
 # Then we can conditionally rewrite paths to this URL.
 status 405 /forbidden
 
+browse /uploads
+
 upload /uploads {
-  to "/var/www"
+  to "/var/www/uploads"
 }
 
 # Allow /uploads to use the verbs it needs.
@@ -58,10 +58,10 @@ rewrite {
 }
 
 # Clone a public repo once/hour.
-git github.com/jumanjihouse/docker-caddy docker-caddy
+git github.com/jumanjihouse/docker-caddy git/docker-caddy
 
 # Allow browsing in this dir.
-browse /docker-caddy
+browse /git/docker-caddy
 
 # Requests to /assets actually go to caddy2 container.
 proxy /assets http://192.168.254.253:2020/ {
